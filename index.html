@@ -11,6 +11,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
     <link rel="manifest" href="./favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -27,79 +30,62 @@
 
     </section>
 
-    <div class="backdrop is-hidden" data-modal>
-        <div class="modal-hero">
-    
-            <button class="modal-link" data-modal-close>
+    <div class="backdrop-franchise is-hidden" data-modal>
+        <div class="modal-contact-franch">
+<!--     
+            <button class="modal-link-franchise" data-modal-close>
                 <svg class="modal-icon-close">
                     <use href="./img/symbol-defs.svg#icon-close">
     
                     </use>
                 </svg>
-            </button>
+            </button> -->
 
     <form class="form">
     
-        <p class="modal-title">Оставьте свои данные,мы вам <wbr>перезвоним</p>
+        <p class="modal-title">Leave your details, we will call you back</p>
         <div class="form-label">
             <label for="user-name">
-                Имя
+                Your name
             </label>
             <input class="form-input" type="text" name="name" id="user-name">
-            <svg class="modal-svg">
-                <use href="./img/symbol-defs.svg#icon-namemodal">
-    
-                </use>
-            </svg>
+            
         </div>
     
         <div class="form-label">
     
             <label for="user-tel">
-                Телефон
+            Your phone number
             </label>
             <input class="form-input" type="tel" name="tell" id="user-tel">
-            <svg class="modal-svg">
-                <use href="./img/symbol-defs.svg#icon-telmodal">
-    
-                </use>
-            </svg>
+            
         </div>
     
     
         <div class="form-label">
             <label for="user-mail">
-                Почта
+            your email address
             </label>
             <input class="form-input" type="email" name="mail" id="user-mail">
-            <svg class="modal-svg">
-                <use href="./img/symbol-defs.svg#icon-mailmodal">
-    
-                </use>
-            </svg>
+            
     
     
         </div>
     
     
         <label class="form-label reset">
-            Комментарий
+            Сomment
     
-            <textarea class="text-area" name="coment" id="user-coment" rows="8" placeholder="Введите текст"></textarea>
+            <textarea class="text-area" name="coment" id="user-coment" rows="25" placeholder="Enter text"></textarea>
         </label>
     
     
-        <!-- <div class="form-label-checkbox"> -->
-        <label class="form-label-checkbox">
-            <input class="form-checkbox visually-hidden" type="checkbox" name="policy">
-            <span class="icon-ok-checbox"></span>
-            Соглашаюсь с рассылкой и принимаю <a class="underline-policy" href="">Условия договора </a>
-        </label>
-        <!-- </div> -->
+ 
     
     
-        <div class="button-box">
-            <button class="button-modal" type="submit">Отправить</button>
+        <div class="button-box-franchise">
+            <button class="button-franchise" type="submit">Submit</button>
+            <button class="modal-link-franchise" data-modal-close type="button">Back</button>
         </div>
     
     </form>
