@@ -86,6 +86,246 @@ html {
    border-left: 5px solid #fff;
 }
 
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+}
+
+ .backdrop.is-hidden {
+  opacity: 0;
+   pointer-events: none;
+ }
+
+.modal-hero {
+  position: absolute;
+  width: 95%;
+  max-width: 450px;
+  overflow: scroll;
+   max-height: 609px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.button {
+  color: red;
+  background-color: fuchsia;
+  font-family: inherit;
+  border-radius: 4px;
+  border-color: transparent;
+  display: inline-block;
+  min-width: 200px;
+  min-height: 50px;
+  text-align: center;
+  padding: 10px 32px;
+  margin-top: 30px;
+ margin-left: 140px;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.modal-link {
+  position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  top: 8px;
+  right: 8px;
+  background-color: #fff;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+  .modal-hero:focus-within .modal-link {
+    fill: hotpink;
+  }
+
+
+.modal-icon-close {
+  width: 18px;
+  height: 18px;
+}
+
+.form {
+  display: block;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  padding: 0;
+ 
+}
+
+.form-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  font-family: inherit;
+}
+
+.form-input {
+ max-width: 370px;
+ max-height: 40px;
+  margin-top: 4px;
+  padding: 10px;
+  padding-left: 35px;
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+ 
+}
+
+
+ .form-input:focus + .modal-svg {
+   fill: darkblue ;
+   border-color: darkorchid;
+ }
+
+.reset {
+  margin-bottom: 20px;
+}
+
+.text-area {
+   max-width: 370px;
+   max-height: 120px;
+  font-size: 14px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+ .text-area:focus-within {
+    border-color: forestgreen;
+    outline: none;
+  }
+
+
+.form-label-checkbox {
+  position: relative;
+ 
+
+  font-size: 12px;
+
+  line-height: 1.166;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.underline-policy {
+  padding-left: 3px;
+  text-decoration-line: underline;
+ 
+}
+
+.form-checkbox {
+  position: absolute;
+}
+
+.icon-ok-checbox {
+  margin-right: 8px;
+  display: inline-block;
+  border: 2px solid black;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  transition: focus 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+  .form-checkbox:checked + .icon-ok-checbox,
+  .form-checkbox:focus:checked + .icon-ok-checbox {
+    background: blueviolet;
+    border-color: red;
+    background-image: url(../img/icon-policu-ok/okpolicy.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: border-box;
+  }
+
+  .form-checkbox:focus-visible + .icon-ok-checbox {
+    border: 2px solid teal;
+  }
+
+
+.modal-svg-focus {
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+  .form-input {
+    width: 448px;
+    height: 40px;
+  }
+
+  .form-label-checkbox {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  .modal-svg {
+    top: 31px;
+  }
+
+
+
+
+
 
 
 
