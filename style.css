@@ -4,6 +4,9 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.2;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .list1 {
   display: block;
@@ -39,13 +42,52 @@ body {
   bottom: 200px;
   width: 50px;
   height: 50px;
-  border: 1px solid brown;
-  border-radius: 50%;
-  background-color: rebeccapurple;
+  border-color: transparent;
+  border-radius: 50%; 
+  background-color: #D41443;
+  display: none;
+ 
 }
 
-.border-button {
-  width: 10px;
-  height: 10px;
-  background-color: crimson;
+.back-to-top-show {
+  display: block;
 }
+
+
+.back-to-top:hover,
+.back-to-top:focus {
+  filter: brightness(1.5);
+ 
+  outline: none;
+}
+
+.back-to-top::before,
+.back-to-top::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back-to-top::before {
+  width: 5px;
+  height: 25px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  background-color: #fff;
+}
+
+.back-to-top::after {
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-top: 5px solid #fff;
+   border-left: 5px solid #fff;
+}
+
+
+
+
+
+
